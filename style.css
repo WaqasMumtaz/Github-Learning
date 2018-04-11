@@ -1,0 +1,56 @@
+div.toss #states{
+    float:right;
+}
+div.toss #btn{
+  float:right;
+}
+ table#crickt{
+    height: 100px;
+    width: 100;
+    border: 1px solid black;
+    
+   }
+/* table#crickt{
+    border: 1px solid black;
+} */
+table#crickt .frst{
+    border: 1px solid black;
+    padding: 5 5 2 10;
+       
+}
+table#crickt .table{
+    border: 1px solid black;
+    padding: 5 5 2 10;
+    border-collapse: collapse;
+       
+}
+table#crickt{
+        border-collapse: collapse;
+       
+}
+/* body {
+    background-image: url("images/ground.jpg");
+    /* background-color: #cccccc; */
+    /* background-size: 300px 100px;
+ } */ 
+ div#head{
+     border: 1px solid black;
+     height: 800px;
+     width: 600;
+ }
+ div#start{
+   margin:20 100 100 450 ;
+ }
+ div#table{
+     float: right;
+ }
+ div#table{
+    float: top;
+}
+ div#first #italic{
+    font-size: 100px;
+ }
+ div#first #scnd{
+    font-size: 100px;
+ }
+
