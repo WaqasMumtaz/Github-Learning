@@ -9,70 +9,45 @@
     
 </head>
 <body>
+        <div id="for_link"><a href='toss.html'>Goto Toss</a></div>
 
-        <div class="toss">
-                <button onClick="startToss()" id="btn">Start</button>  <select id="states">
-                <option value="" selected="selected">
-                SELECT A TOSS</option>
-                <option value="head">Haid</option>
-                <option value="tail">Tail</option>
-                </select>&nbsp;&nbsp;<br>
-                
-   </div>
-   <div id="result">
-     
-   </div>
-
-   <div id="choice"></div>
-   <div id="choiceBol"></div>
-   <div id="start"> 
-  <h1>Cricket Game</h1> <br>
-  
+        <div id="table">
+                <table id="crickt">
+                    <tr>
+                        <th class="table"colspan="4">Report Table</th>  
+                    </tr>
+                    <tr>
+                        <th class="table"colspan="2">Team A</th>
+                        <th class="table"colspan="2">Team B</th> 
+                   </tr>
+                   <tr>
+                          <td class="table"id='total_Score'colspan='2'></td> 
+                          <td class="table"id='for_teamB'colspan='2'></td>
+               
+                  </tr>
+                    
+                          
+                </table>
+              </div>
+           
+              
+    <div id="start"> 
+  <h1 class="great">Cricket Game<i id="winning"></i></i></h1><br>
+  <div id="for_logo">
   <h1 id="head"></h1>
+  
   <h1>wickets:<i id="wickt"></i></h1>  
   <h1>Score:<i id="runs"></i></h1> 
   <h1>Balls:<i id="bals"></i></h1>
   <h1>Over:<i id="over"></i></h1>
-  <button onClick="forRandom()" id="btn_1">Click Me</button>
-  <button onClick="forResult()" id="btn_2">Check Result</button>
-  <!-- <button onClick="" id="btn_2">Click Me</button> -->
-
-  <br>
-  <br>
-
-  <div id="first"><i id='italic'></i><i id="scnd"></i></div>
-  <br>
-  
-  <div id="table">
-  <table id="crickt">
-      <tr>
-          <th class="table"colspan="4">Report Table</th>  
-      </tr>
-      <tr>
-          <th class="table"colspan="2">Team A</th>
-          <th class="table"colspan="2">Team B</th> 
-     </tr>
-     <tr class="frst" >
-            <td class="frst">Total Score</td>
-            <td class="frst"id='total_Score'></td>
-            <td class="frst">Total Score</td>
-            <td class="frst"id='team_B1'></td>
-
-     </tr>
-      <tr class="frst">
-        <td class="frst">Total Wickets</td>
-        <td class="frst"id='total_Wickts'></td>
-        <td class="frst">Total Wickets</td>
-        <td class="frst"id='team_B2'></td>
-    </tr>
-            
-  </table>
+  <button onClick="forRandom()" id="btn_1"><img src="images/logo.jpg" width="100"height="100"></button>
+  <button onClick="forRandom()" id="btn_3"><img src="images/bowler.jpg" width="100" height="100" ></button>
+  <button onClick="myFunc()" id="btn_2"><img src="images/button.jpg"id="result"></button>
   </div>
-
-</div>
-
+  <br>
   
-
+  </div>
+  
 
 
 

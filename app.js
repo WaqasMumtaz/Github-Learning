@@ -3,25 +3,28 @@ var forWicket=document.getElementById('wickt');
 var forScore=document.getElementById('runs');
 var forBalls=document.getElementById('bals');
 var forOver=document.getElementById('over');
-var forCalc=document.getElementById('first');
-var forCalc2=document.getElementById('italic');
-var forCalc3=document.getElementById('scnd');
+var againWickt=document.getElementById('wickt');
+var againRun=document.getElementById('runs');
+//var forTotal=document.getElementById('for_runs');
+var clmRef=document.getElementById('total_Score');
+var scndRef=document.getElementById('for_teamB');
+
 
 var wickets=0;
 var score=0;
-//var over=0;
 var balls=0;
+var rsltTeamA;
+var rsltTeamB;
+
 function forRandom(){
-    // document.getElementById('btn_2').disabled=true;
     var a=Math.floor(Math.random()*7);
     if(a===0){
        wickets++;
-       forCalc3.innerHTML=wickets;
+       forWicket.innerHTML=wickets;
     }else{
         score+=a;
-        forCalc2.innerHTML=score;
+       againRun.innerHTML=score;
     }
-    //forGame.innerHTML=a;
     console.log(a);
     
     balls++;
@@ -31,9 +34,16 @@ function forRandom(){
    }else if(balls ===12){
        forOver.innerHTML='Second Over Complete Team A';
              
-    document.getElementById('total_Score').innerHTML=score;
-    document.getElementById('total_Wickts').innerHTML=wickets;
-    document.getElementById('head').innerHTML='Team B';
+    var a =score;
+    //console.log(a);
+
+    var b=wickets;
+    // console.log(b);
+    var  c=a +'/ '+b;
+    
+    rsltTeamA=clmRef.innerHTML=c;
+    //console.log(rsltTeamA);
+    
     wickets=0;
     score=0;
     forWicket.innerHTML=wickets;
@@ -41,9 +51,14 @@ function forRandom(){
       
    }if(balls ===24){
     document.getElementById('btn_1').disabled=true;
-    document.getElementById('team_B1').innerHTML=score;
-    document.getElementById('team_B2').innerHTML=wickets;
-   }
+    document.getElementById('btn_3').disabled=true;
+    var teamB_Score=score;
+    var teamB_Wickts=wickets;
+    var combineTeams=teamB_Score+'/ '+teamB_Wickts;
+    rsltTeamB=scndRef.innerHTML=combineTeams;
+    //console.log(rsltTeamB); 
+       
+}
     if(balls === 18){
         forOver.innerHTML='First Over Complete Team B';
     }
@@ -51,16 +66,24 @@ function forRandom(){
         forOver.innerHTML='Second Over Complete Team B';
     }
     
-
-}
-// var frstTeam1=document.getElementById('total_Score').innerHTML=score;
-// var scndTeam=document.getElementById('team_B1').innerHTML=score;
-function forResult(){
-    console.log('Hello World');
+    
     
 }
-// var forRandom=(Math.floor(Math.random()*2)+1);
-// console.log(forRandom);
+var forWinning=document.getElementById('winning');
+function myFunc(){
+    if(rsltTeamA > rsltTeamB){
+        //console.log('Team A Win');
+        forWinning.innerHTML='Congrats Team A Win The Match...';
+
+    }
+    if(rsltTeamA < rsltTeamB){
+        //console.log('Team B Win');
+        forWinning.innerHTML='Congrats Team B Win The Match...';
+    }
+       
+    
+}
+
 var forToss=document.getElementById('result');
 var forChoice=document.getElementById('choice');
 var forChoiceBoll=document.getElementById('choiceBol');
@@ -78,7 +101,7 @@ function startToss(){
          forChoiceBoll.innerHTML='Boll First';
 
      }
-     if(a.selectedIndex !== forRandom){
+     else if(a.selectedIndex !== forRandom){
          //console.log('You loss toss');
          forToss.innerHTML='You Loss The Toss';
      }
